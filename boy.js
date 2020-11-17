@@ -1,0 +1,25 @@
+class Boy{
+    constructor(){
+       this.boy=createSprite(25,40,25,25);
+       this.boyImage=loadImage("Pictures/Protagonist.png");
+       this.boy.setCollider("rectangle",20,0,140,140);
+    }
+    display(){
+        this.boy.addImage(this.boyImage); 
+        this.boy.scale=0.5;
+    }
+    control(){
+        if(keyDown(LEFT_ARROW)){
+            this.boy.x=this.boy.x-5;
+        }
+        if(keyDown(RIGHT_ARROW)){
+            this.boy.x=this.boy.x+5;
+        } 
+        if(keyDown(UP_ARROW)){
+            this.boy.y=this.boy.y-5;
+        }
+        if(keyDown(DOWN_ARROW)){
+            this.boy.y=this.boy.y+5;
+        }
+    }
+}
